@@ -7,7 +7,11 @@ export default function FilmList({ films }) {
         <div
           className="film"
           key={film.id}
-          style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/films/${film.title}.jpeg` }}
+          style={{
+            backgroundImage: `url(${process.env.PUBLIC_URL}/films/${film.title
+              .toLowerCase()
+              .replace(/ /g, '-')}.jpeg`,
+          }}
         >
           <div className="content">
             <h1>{film.title}</h1>

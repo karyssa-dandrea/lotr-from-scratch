@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function FilmList({ films }) {
-  console.log(films);
   return (
     <section className="films">
       {films.map((film) => (

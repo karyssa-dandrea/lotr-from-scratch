@@ -1,6 +1,7 @@
 import BookList from '../../components/Books/BookList';
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { fetchBooks } from '../../services/books';
 
 export default function Books() {
   const [data, setData] = useState([]);
@@ -8,13 +9,8 @@ export default function Books() {
     bookList();
   }, []);
   const bookList = async () => {
-    const resp = await fetch('https://the-one-api.dev/v2/book/', {
-      headers: {
-        Authorization: `Bearer ${process.env.REACT_APP_API_KEY}`,
-      },
-    });
-    const data = await resp.json();
-    setData(data.docs);
+    const resp = await fetchBooks();
+    setData(resp);
   };
   // get books by getting api from fetch
   // pass those books to booklist, like i did with films

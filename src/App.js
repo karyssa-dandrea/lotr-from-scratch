@@ -1,9 +1,9 @@
 import './App.css';
 import { BrowserRouter, NavLink, Switch, Route } from 'react-router-dom';
-import Films from './views/Films/Films';
 import Books from './views/Books/Books';
 import Characters from './views/Characters/Characters';
 import Main from './views/Main/Main';
+import Films from './views/Films/Films';
 
 function App() {
   return (

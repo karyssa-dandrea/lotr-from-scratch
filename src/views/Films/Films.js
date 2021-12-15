@@ -1,6 +1,6 @@
 import { fetchFilms } from '../../services/films';
 import { useEffect, useState } from 'react';
-import FilmList from './components/Films/FilmList';
+import FilmList from '../../components/Films/Filmlist';
 
 export default function Films() {
   const [data, setData] = useState([]);
